@@ -44,6 +44,8 @@
             info = new Button();
             panel2 = new Panel();
             extra = new Button();
+            button1 = new Button();
+            button2 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -61,6 +63,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(btnDiv);
             panel1.Controls.Add(btnSub);
             panel1.Controls.Add(ans);
@@ -198,6 +202,28 @@
             extra.UseVisualStyleBackColor = true;
             extra.Click += extra_Click;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI Black", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(26, 212);
+            button1.Name = "button1";
+            button1.Size = new Size(70, 70);
+            button1.TabIndex = 8;
+            button1.Text = "^";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI Black", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Location = new Point(178, 212);
+            button2.Name = "button2";
+            button2.Size = new Size(70, 70);
+            button2.TabIndex = 9;
+            button2.Text = "√";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Rekenmachine
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -233,5 +259,7 @@
         private Button info;
         private Panel panel2;
         private Button extra;
+        private Button button1;
+        private Button button2;
     }
 }

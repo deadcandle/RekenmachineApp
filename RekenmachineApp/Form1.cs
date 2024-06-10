@@ -22,6 +22,10 @@ namespace RekenmachineApp
                         return (double.Parse(num1) - double.Parse(num2)).ToString();
                     case "/":
                         return (double.Parse(num1) / double.Parse(num2)).ToString();
+                    case "square":
+                        return Math.Sqrt(double.Parse(num1)).ToString();
+                    case "exp":
+                        return Math.Pow(double.Parse(num1), double.Parse(num2)).ToString();
                 }
             }
             catch (Exception ex)
@@ -72,6 +76,18 @@ namespace RekenmachineApp
         private void extra_Click(object sender, EventArgs e)
         {
             MessageBox.Show("(:");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            method = "exp";
+            calcTimer.Start();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            method = "square";
+            calcTimer.Start();
         }
     }
 }
